@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./assets/logo_fatto_1.png" type="image/x-icon">
+    <title>Incluir Tarefa</title>
+</head>
+
+<body>
+    <main class="container">
+        <form action="" id="todoForm">
+            <input id="nome" class="input-task" placeholder="Nome" required>
+            <input id="custo" class="input-task" placeholder="Custo" required type="number">
+            <input id="dataLimite" class="input-task" placeholder="Data Limite" type="date" required>
+            <button class="button-add-task" type="submit">Adicionar</button>
+        </form>
+        <button onclick="window.location.href='listar.html'">Ver Tarefas</button>
+    </main>
+    <script src="./js/incluir.js"></script>
+</body>
+
+</html>

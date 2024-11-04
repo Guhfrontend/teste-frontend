@@ -46,7 +46,7 @@ document.getElementById('todoForm').addEventListener('submit', (event) => {
       }else{
       console.log(data);
       alert('Tarefa adicionada com sucesso!');
-      window.location.href = 'listar.html';
+      window.location.href = '../index.html';
 }
 })
     .catch(error => {

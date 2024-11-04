@@ -1,5 +1,5 @@
 function fetchData() {
-  fetch("http://localhost:8080/tarefas")
+  fetch("https://teste-backend-crfz.onrender.com/tarefas")
     .then(response => {
       if (!response.ok) {
         throw new Error("Erro na rede: " + response.statusText);
@@ -49,7 +49,7 @@ function renderTodoList(todos) {
 
 function deleteTodo(id) {
   if (confirm("Tem certeza que quer excluir esta tarefa?")) {
-    fetch(`http://localhost:8080/tarefas/${id}`, {
+    fetch(`https://teste-backend-crfz.onrender.com/tarefas/${id}`, {
       method: 'DELETE'
     })
       .then(response => {
@@ -70,7 +70,7 @@ function deleteTodo(id) {
 
 function removeAllTodos() {
   if (confirm("Tem certeza que quer remover todas as tarefas?")) {
-    fetch("http://localhost:8080/tarefas", {
+    fetch("https://teste-backend-crfz.onrender.com/tarefas", {
       method: 'DELETE'
     })
       .then(response => {
@@ -128,7 +128,7 @@ function saveEdit() {
     ordem: currentEditId
   };
 
-  fetch(`http://localhost:8080/tarefas/${currentEditId}`, {
+  fetch(`https://teste-backend-crfz.onrender.com/tarefas/${currentEditId}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json'
@@ -184,7 +184,7 @@ function saveTodos(todos) {
 function updateOrdem(todos) {
   todos.forEach((todo, index) => {
     todo.ordem = index + 1; 
-    fetch(`http://localhost:8080/tarefas/${todo.id}`, {
+    fetch(`https://teste-backend-crfz.onrender.com/tarefas/${todo.id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'

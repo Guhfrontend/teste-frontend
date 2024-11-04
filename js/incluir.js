@@ -22,7 +22,7 @@ document.getElementById('todoForm').addEventListener('submit', (event) => {
     ordem: sorteio()
   }
 
-  fetch('http://localhost:8080/tarefas', {
+  fetch('https://teste-backend-crfz.onrender.com/tarefas', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
